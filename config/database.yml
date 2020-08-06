@@ -1,0 +1,30 @@
+development:
+  adapter: postgresql
+  database: sygiops_support_api_development
+  pool: 50
+  host: localhost
+  timeout: 5000
+  encoding: utf8
+  username: postgres
+  password: password
+
+test:
+  adapter: postgresql
+  database: sygiops_support_api_test
+  pool: 50
+  host: localhost
+  timeout: 5000
+  encoding: utf8
+  username: postgres
+  password: password
+
+
+production:
+  adapter: postgresql
+  database: sygiops_support_api_production
+  pool: 50
+  host: localhost
+  timeout: 5000
+  encoding: utf8
+  username: postgres
+  password: password

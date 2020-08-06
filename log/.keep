@@ -1,0 +1,107 @@
+I, [2020-06-10T15:27:06.966781 #924-47242897212920]  INFO -- : Running job thread for 'Check Channels' (Channel.fetch) status is: sleep
+I, [2020-06-10T15:27:06.967160 #924-47242897212920]  INFO -- : Running job thread for 'Execute jobs' (Job.run) status is: sleep
+I, [2020-06-10T15:27:13.566311 #924-47242979527220]  INFO -- : execute Channel.fetch (try_count 0)...
+I, [2020-06-10T15:27:13.570540 #924-47242979527220]  INFO -- : fetching imap (imap.gmail.com/annapurna.tiwari1998@gmail.com port=993,ssl=true,starttls=false,folder=INBOX,keep_on_server=false)
+I, [2020-06-10T15:27:14.232469 #922-46956907723420]  INFO -- : Started GET "/api/v1/channels_email?_=1591782071097" for 127.0.0.1 at 2020-06-10 15:27:14 +0530
+I, [2020-06-10T15:27:14.241807 #922-46956907723420]  INFO -- : Processing by ChannelsEmailController#index as JSON
+I, [2020-06-10T15:27:14.242013 #922-46956907723420]  INFO -- :   Parameters: {"_"=>"1591782071097"}
+I, [2020-06-10T15:27:14.287426 #922-46956907723420]  INFO -- : Completed 200 OK in 45ms (Views: 5.3ms | ActiveRecord: 3.5ms)
+I, [2020-06-10T15:27:18.660694 #924-47242979527220]  INFO -- :  - message 1/1
+I, [2020-06-10T15:27:20.485429 #924-47242979527220]  INFO -- : Process email with msgid '<CACeBUgF7BSwkb6JyBYjEx=iQDW7N-=uf+VKQrD+ydMQkdHi=NA@mail.gmail.com>'
+I, [2020-06-10T15:27:20.510090 #924-47242979527220]  INFO -- : set_attributes_by_x_headers header x-zammad-ticket-customer_id found. Assign customer_id=3
+I, [2020-06-10T15:27:20.826993 #924-47242979527220]  INFO -- : set_attributes_by_x_headers header x-zammad-article-sender found Agent
+I, [2020-06-10T15:27:20.827090 #924-47242979527220]  INFO -- : set_attributes_by_x_headers found Ticket::Article::Sender lookup for 'Agent'
+I, [2020-06-10T15:27:20.827804 #924-47242979527220]  INFO -- : set_attributes_by_x_headers assign Ticket::Article sender_id=1
+I, [2020-06-10T15:27:20.828002 #924-47242979527220]  INFO -- : set_attributes_by_x_headers header x-zammad-article-preferences found. Assign preferences={"send-auto-response"=>true, "is-auto-response"=>false}
+I, [2020-06-10T15:27:21.541305 #924-47242979527220]  INFO -- : Enqueued TicketUserTicketCounterJob (Job ID: 29f54053-5264-4eb8-8fe2-79b74834d72d) to DelayedJob(default) with arguments: 3, 3
+I, [2020-06-10T15:27:23.231813 #922-46956874634080]  INFO -- : Started GET "/api/v1/users/3?full=true&_=1591782071098" for 127.0.0.1 at 2020-06-10 15:27:23 +0530
+I, [2020-06-10T15:27:23.241094 #922-46956874634080]  INFO -- : Processing by UsersController#show as JSON
+I, [2020-06-10T15:27:23.241237 #922-46956874634080]  INFO -- :   Parameters: {"full"=>"true", "_"=>"1591782071098", "id"=>"3"}
+I, [2020-06-10T15:27:23.281386 #922-46956874634080]  INFO -- : Completed 200 OK in 40ms (Views: 3.4ms | ActiveRecord: 6.2ms)
+I, [2020-06-10T15:27:23.317390 #922-46956874634080]  INFO -- : Started GET "/api/v1/ticket_stats?user_id=3&organization_id=&_=1591782071099" for 127.0.0.1 at 2020-06-10 15:27:23 +0530
+I, [2020-06-10T15:27:23.326412 #922-46956874634080]  INFO -- : Processing by TicketsController#stats as JSON
+I, [2020-06-10T15:27:23.326526 #922-46956874634080]  INFO -- :   Parameters: {"user_id"=>"3", "organization_id"=>"", "_"=>"1591782071099"}
+I, [2020-06-10T15:27:23.488150 #922-46956874634080]  INFO -- : Completed 200 OK in 162ms (Views: 1.9ms | ActiveRecord: 20.2ms)
+I, [2020-06-10T15:27:23.535483 #924-47242979527220]  INFO -- : done
+I, [2020-06-10T15:27:23.557215 #924-47242979527220]  INFO -- : ended Channel.fetch took: 10.050287868 seconds.
+I, [2020-06-10T15:27:25.124749 #924-47242948626720]  INFO -- : 2020-06-10T15:27:25+0530: [Worker(host:sygitech-HP-Elitebook pid:924)] Job Transaction::BackgroundJob (id=125) RUNNING
+I, [2020-06-10T15:27:25.546142 #924-47242948626720]  INFO -- : Send notification to: annapurna.tiwari@sygitech.com (from:Notification Master <noreply@localhost>/subject:New Ticket (zammad test) [Ticket#68047])
+I, [2020-06-10T15:27:25.811983 #924-47242948626720]  INFO -- : 2020-06-10T15:27:25+0530: [Worker(host:sygitech-HP-Elitebook pid:924)] Job Transaction::BackgroundJob (id=125) COMPLETED after 0.6870
+I, [2020-06-10T15:27:25.823990 #924-47242948626720]  INFO -- : 2020-06-10T15:27:25+0530: [Worker(host:sygitech-HP-Elitebook pid:924)] Job TicketUserTicketCounterJob [29f54053-5264-4eb8-8fe2-79b74834d72d] from DelayedJob(default) with arguments: [3, 3] (id=126) (queue=default) RUNNING
+I, [2020-06-10T15:27:25.847905 #924-47242948626720]  INFO -- : Performing TicketUserTicketCounterJob (Job ID: 29f54053-5264-4eb8-8fe2-79b74834d72d) from DelayedJob(default) with arguments: 3, 3
+I, [2020-06-10T15:27:25.968015 #924-47242948626720]  INFO -- : Enqueued TicketCreateScreenJob (Job ID: 378fca65-d2ea-49aa-877a-3370e4095e7b) to DelayedJob(default) at 2020-06-10 09:57:35 UTC
+I, [2020-06-10T15:27:26.001260 #924-47242948626720]  INFO -- : Performed TicketUserTicketCounterJob (Job ID: 29f54053-5264-4eb8-8fe2-79b74834d72d) from DelayedJob(default) in 153.16ms
+I, [2020-06-10T15:27:26.012210 #924-47242948626720]  INFO -- : 2020-06-10T15:27:26+0530: [Worker(host:sygitech-HP-Elitebook pid:924)] Job TicketUserTicketCounterJob [29f54053-5264-4eb8-8fe2-79b74834d72d] from DelayedJob(default) with arguments: [3, 3] (id=126) (queue=default) COMPLETED after 0.1880
+I, [2020-06-10T15:27:26.902363 #922-46956907724020]  INFO -- : Started GET "/api/v1/ticket_stats?user_id=3&organization_id=&_=1591782071100" for 127.0.0.1 at 2020-06-10 15:27:26 +0530
+I, [2020-06-10T15:27:26.911759 #922-46956907724020]  INFO -- : Processing by TicketsController#stats as JSON
+I, [2020-06-10T15:27:26.911878 #922-46956907724020]  INFO -- :   Parameters: {"user_id"=>"3", "organization_id"=>"", "_"=>"1591782071100"}
+I, [2020-06-10T15:27:26.989944 #922-46956907724020]  INFO -- : Completed 200 OK in 78ms (Views: 3.4ms | ActiveRecord: 24.4ms)
+I, [2020-06-10T15:27:28.232267 #922-46956874633420]  INFO -- : Started GET "/api/v1/online_notifications/?full=true&_=1591782071101" for 127.0.0.1 at 2020-06-10 15:27:28 +0530
+I, [2020-06-10T15:27:28.238015 #922-46956874633420]  INFO -- : Processing by OnlineNotificationsController#index as JSON
+I, [2020-06-10T15:27:28.238133 #922-46956874633420]  INFO -- :   Parameters: {"full"=>"true", "_"=>"1591782071101"}
+I, [2020-06-10T15:27:28.478630 #922-46956874633420]  INFO -- : Completed 200 OK in 240ms (Views: 26.3ms | ActiveRecord: 5.7ms)
+I, [2020-06-10T15:27:38.057522 #924-47242948626720]  INFO -- : 2020-06-10T15:27:38+0530: [Worker(host:sygitech-HP-Elitebook pid:924)] Job TicketCreateScreenJob [378fca65-d2ea-49aa-877a-3370e4095e7b] from DelayedJob(default) with arguments: [] (id=127) (queue=default) RUNNING
+I, [2020-06-10T15:27:38.082702 #924-47242948626720]  INFO -- : Performing TicketCreateScreenJob (Job ID: 378fca65-d2ea-49aa-877a-3370e4095e7b) from DelayedJob(default)
+E, [2020-06-10T15:27:38.123019 #924-47242948626720] ERROR -- : push ticket_create for user 3
+I, [2020-06-10T15:27:38.144871 #924-47242948626720]  INFO -- : Performed TicketCreateScreenJob (Job ID: 378fca65-d2ea-49aa-877a-3370e4095e7b) from DelayedJob(default) in 62.0ms
+I, [2020-06-10T15:27:38.157101 #924-47242948626720]  INFO -- : 2020-06-10T15:27:38+0530: [Worker(host:sygitech-HP-Elitebook pid:924)] Job TicketCreateScreenJob [378fca65-d2ea-49aa-877a-3370e4095e7b] from DelayedJob(default) with arguments: [] (id=127) (queue=default) COMPLETED after 0.0993
+I, [2020-06-10T15:27:44.231203 #922-46956907723740]  INFO -- : Started GET "/api/v1/channels_email?_=1591782071102" for 127.0.0.1 at 2020-06-10 15:27:44 +0530
+I, [2020-06-10T15:27:44.239542 #922-46956907723740]  INFO -- : Processing by ChannelsEmailController#index as JSON
+I, [2020-06-10T15:27:44.239616 #922-46956907723740]  INFO -- :   Parameters: {"_"=>"1591782071102"}
+I, [2020-06-10T15:27:44.270564 #922-46956907723740]  INFO -- : Completed 200 OK in 31ms (Views: 3.3ms | ActiveRecord: 3.6ms)
+I, [2020-06-10T15:27:53.604391 #924-47242979527220]  INFO -- : execute Channel.fetch (try_count 0)...
+I, [2020-06-10T15:27:53.609230 #924-47242979527220]  INFO -- : fetching imap (imap.gmail.com/annapurna.tiwari1998@gmail.com port=993,ssl=true,starttls=false,folder=INBOX,keep_on_server=false)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I, [2020-06-12T15:48:09.525880 #878-47197586038300]  INFO -- : Started PUT "/api/v1/taskbar/12" for 127.0.0.1 at 2020-06-12 15:48:09 +0530
+I, [2020-06-12T15:48:09.534120 #878-47197586038300]  INFO -- : Processing by TaskbarController#update as JSON
+I, [2020-06-12T15:48:09.534275 #878-47197586038300]  INFO -- :   Parameters: {"key"=>"Ticket-48", "client_id"=>"123", "callback"=>"TicketZoom", "state"=>{"ticket"=>{}, "article"=>{"form_id"=>"957072373"}}, "params"=>{"ticket_id"=>"48", "init"=>true}, "prio"=>12, "notify"=>false, "active"=>true, "attachments"=>[], "updated_at"=>"2020-06-12T10:17:42.692Z", "id"=>"12"}
+I, [2020-06-12T15:48:09.589044 #878-47197586038300]  INFO -- : Completed 200 OK in 55ms (Views: 0.4ms | ActiveRecord: 29.5ms)
+I, [2020-06-12T15:48:16.613574 #887-47422570479080]  INFO -- : execute Channel.fetch (try_count 0)...
+I, [2020-06-12T15:48:16.615527 #887-47422570479080]  INFO -- : fetching imap (imap.gmail.com/annapurna.tiwari1998@gmail.com port=993,ssl=true,starttls=false,folder=INBOX,keep_on_server=false)
+I, [2020-06-12T15:48:21.769543 #878-47197586037900]  INFO -- : Started GET "/api/v1/ticket_attachment/48/60/150?view=inline" for 127.0.0.1 at 2020-06-12 15:48:21 +0530
+I, [2020-06-12T15:48:21.774286 #878-47197586037900]  INFO -- : Processing by TicketArticlesController#attachment as HTML
+I, [2020-06-12T15:48:21.774380 #878-47197586037900]  INFO -- :   Parameters: {"view"=>"inline", "ticket_id"=>"48", "article_id"=>"60", "id"=>"150"}
+I, [2020-06-12T15:48:21.795411 #878-47197586037900]  INFO -- :   Rendering text template
+I, [2020-06-12T15:48:21.795544 #878-47197586037900]  INFO -- :   Rendered text template (0.0ms)
+I, [2020-06-12T15:48:21.795642 #878-47197586037900]  INFO -- : Sent data db.png (0.5ms)
+I, [2020-06-12T15:48:21.797217 #878-47197586037900]  INFO -- : Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 6.7ms)
+I, [2020-06-12T15:48:25.544883 #878-47197566203780]  INFO -- : Started GET "/api/v1/ticket_attachment/48/60/150" for 127.0.0.1 at 2020-06-12 15:48:25 +0530
+I, [2020-06-12T15:48:25.550618 #878-47197566203780]  INFO -- : Processing by TicketArticlesController#attachment as HTML
+I, [2020-06-12T15:48:25.550705 #878-47197566203780]  INFO -- :   Parameters: {"ticket_id"=>"48", "article_id"=>"60", "id"=>"150"}
+I, [2020-06-12T15:48:25.561369 #878-47197586038020]  INFO -- : Started GET "/api/v1/ticket_attachment/48/60/150?disposition=attachment" for 127.0.0.1 at 2020-06-12 15:48:25 +0530
+I, [2020-06-12T15:48:25.570567 #878-47197586038020]  INFO -- : Processing by TicketArticlesController#attachment as HTML
+I, [2020-06-12T15:48:25.571229 #878-47197586038020]  INFO -- :   Parameters: {"disposition"=>"attachment", "ticket_id"=>"48", "article_id"=>"60", "id"=>"150"}
+I, [2020-06-12T15:48:25.601067 #878-47197566203780]  INFO -- :   Rendering text template
+I, [2020-06-12T15:48:25.739014 #878-47197566203780]  INFO -- :   Rendered text template (0.0ms)
+I, [2020-06-12T15:48:25.740169 #878-47197566203780]  INFO -- : Sent data db.png (139.3ms)
+I, [2020-06-12T15:48:25.740999 #878-47197586038020]  INFO -- :   Rendering text template
+I, [2020-06-12T15:48:25.742814 #878-47197586038020]  INFO -- :   Rendered text template (0.0ms)
+I, [2020-06-12T15:48:25.742993 #878-47197586038020]  INFO -- : Sent data db.png (2.2ms)
+I, [2020-06-12T15:48:25.745472 #878-47197566203780]  INFO -- : Completed 200 OK in 195ms (Views: 139.2ms | ActiveRecord: 30.3ms)
+I, [2020-06-12T15:48:25.746024 #878-47197586038020]  INFO -- : Completed 200 OK in 173ms (Views: 2.1ms | ActiveRecord: 14.6ms)
+I, [2020-06-12T15:48:28.642703 #887-47422488208880]  INFO -- : Scheduler running...
+I, [2020-06-12T15:48:28.642978 #887-47422488208880]  INFO -- : @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@threads@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
